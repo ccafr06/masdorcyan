@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <link rel="icon" href="favicon_masdorcyan_32x32.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="description" content="Découvrez la région autour du Mas d'Orcyan : la Grotte de Saint-Cézaire, Grasse, Cannes, le lac de Saint-Cassien et les villages perchés de l'arrière-pays.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À découvrir autour du Mas | Tourisme à Saint-Cézaire-sur-Siagne et Côte d'Azur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        provence: {
+                            50: '#f7f8f6',
+                            100: '#edf0eb',
+                            600: '#606c38',
+                            700: '#4f582e',
+                            800: '#283618',
+                        },
+                        terracotta: '#dda15e',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-provence-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Barre de navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-provence-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-28 items-center">
+                <div class="flex items-center">
+                    <a href="index.html#accueil" class="flex items-center">
+                        <img src="images/logo.jpg" alt="Logo Le Mas d'Orcyan" class="h-24 w-auto object-contain py-2">
+                    </a>
+                </div>
+                
+                <!-- Liens Desktop -->
+                <div class="hidden md:flex items-center space-x-8 font-medium text-gray-600">
+                    <a href="index.html#accueil" class="hover:text-provence-600 transition-colors">Accueil</a>
+                    <a href="index.html#propos" class="hover:text-provence-600 transition-colors">À Propos</a>
+                    <a href="index.html#chambres" class="hover:text-provence-600 transition-colors">Nos Chambres</a>
+                    <a href="index.html#galerie" class="hover:text-provence-600 transition-colors">Galerie & Bien-être</a>
+                    <a href="index.html#contact" class="bg-provence-600 text-white px-5 py-2.5 rounded-lg hover:bg-provence-700 transition-all shadow-md shadow-provence-600/10">Réserver</a>
+                </div>
+
+                <!-- Bouton Hamburger Mobile -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-600 hover:text-provence-600 focus:outline-none p-2" aria-label="Ouvrir le menu">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Déroulant Mobile -->
+        <div id="menu-mobile" class="hidden md:hidden bg-white border-t border-provence-100 shadow-inner">
+            <div class="px-4 pt-2 pb-6 space-y-3 font-medium text-gray-600 flex flex-col text-center">
+                <a href="index.html#accueil" class="mobile-link py-2 hover:bg-provence-50 rounded-lg text-lg">Accueil</a>
+                <a href="index.html#propos" class="mobile-link py-2 hover:bg-provence-50 rounded-lg text-lg">À Propos</a>
+                <a href="index.html#chambres" class="mobile-link py-2 hover:bg-provence-50 rounded-lg text-lg">Nos Chambres</a>
+                <a href="index.html#galerie" class="mobile-link py-2 hover:bg-provence-50 rounded-lg text-lg">Galerie & Bien-être</a>
+                <a href="index.html#contact" class="mobile-link bg-provence-600 text-white py-3 rounded-xl hover:bg-provence-700 transition-all shadow-md">Réserver</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête de la page -->
+    <header class="bg-provence-800 text-white py-16 text-center px-4">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-3xl md:text-5xl font-serif font-bold mb-4">À découvrir autour du Mas</h1>
+            <div class="w-16 h-1 bg-terracotta mx-auto mb-4 rounded-full"></div>
+            <p class="text-lg text-provence-100 font-light">Idéalement situé entre la douceur de l'arrière-pays et l'effervescence de la Côte d'Azur, le Mas d'Orcyan est le point de départ parfait pour explorer des trésors naturels et culturels d'exception.</p>
+        </div>
+    </header>
+
+<!-- Section Principale : Les Points d'Intérêt -->
+    <main class="flex-grow py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <!-- Grotte de Saint-Cézaire -->
+            <div class="bg-white p-6 rounded-2xl border border-provence-100 shadow-sm flex gap-4 items-start">
+                <div class="p-3 bg-provence-600/10 rounded-xl text-provence-600 shrink-0">
+                    <i data-lucide="mountain" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-serif font-bold text-provence-800 mb-2">Grotte de Saint-Cézaire</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">À deux pas du Mas, plongez à près de 40 mètres sous terre pour découvrir un chef-d'œuvre de la nature. Un parcours guidé de 600 mètres vous dévoile des draperies majestueuses, des stalactites géantes et une étonnante cascade souterraine. Une visite magique et rafraîchissante.</p>
+                </div>
+            </div>
+
+            <!-- Gorges de la Siagne -->
+            <div class="bg-white p-6 rounded-2xl border border-provence-100 shadow-sm flex gap-4 items-start">
+                <div class="p-3 bg-provence-600/10 rounded-xl text-provence-600 shrink-0">
+                    <i data-lucide="compass" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-serif font-bold text-provence-800 mb-2">Les Gorges de la Siagne</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Véritable joyau sauvage accessible depuis le village. Offrez-vous une randonnée ressourçante au milieu d'une nature luxuriante pour rejoindre le fameux Pont des Tuves. Entre eaux limpides, cascades cachées et zones ombragées, c'est un paradis de fraîcheur pour les marcheurs.</p>
+                </div>
+            </div>
+
+            <!-- Grottes de Saint-Vallier (Baume Obscure) -->
+            <div class="bg-white p-6 rounded-2xl border border-provence-100 shadow-sm flex gap-4 items-start">
+                <div class="p-3 bg-provence-600/10 rounded-xl text-provence-600 shrink-0">
+                    <i data-lucide="binary" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-serif font-bold text-provence-800 mb-2">Grottes de Saint-Vallier (Baume Obscure)</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Situé à Saint-Vallier-de-Thiey, le Souterroscope de la Baume Obscure vous propose une aventure insolite à 60 mètres de profondeur. Équipé d'un guidage audio, vous explorez la grotte au rythme d'un spectacle de musiques et de lumières qui sublime le travail de l'eau sur la roche.</p>
+                </div>
+            </div>
+
+            <!-- Grasse -->
+            <div class="bg-white p-6 rounded-2xl border border-provence-100 shadow-sm flex gap-4 items-start">
+                <div class="p-3 bg-provence-600/10 rounded-xl text-provence-600 shrink-0">
+                    <i data-lucide="sparkles" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-serif font-bold text-provence-800 mb-2">Grasse, Capitale du Parfum</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Laissez-vous envoûter par les ruelles médiévales de Grasse. Visitez les célèbres parfumeries historiques (Fragonard, Molinard, Galimard), créez votre propre fragrance lors d'un atelier et explorez le Musée International de la Parfumerie.</p>
+                </div>
+            </div>
+
+            <!-- La Montagne & Activités d'Altitude -->
+            <div class="bg-white p-6 rounded-2xl border border-provence-100 shadow-sm flex gap-4 items-start">
+                <div class="p-3 bg-provence-600/10 rounded-xl text-provence-600 shrink-0">
+                    <i data-lucide="trees" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-serif font-bold text-provence-800 mb-2">La Montagne & L'Audibergue</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Prenez de la hauteur vers le massif de l'Audibergue et le Parc Naturel Régional des Préalpes d'Azur. En été, c'est le terrain de jeu idéal pour la randonnée, le VTT, l'accrobranche ou le parapente. En hiver, la station familiale ouvre ses pistes avec une vue unique et panoramique sur la mer Méditerranée.</p>
+                </div>
+            </div>
+
+            <!-- Lac de Saint-Cassien -->
+            <div class="bg-white p-6 rounded-2xl border border-provence-100 shadow-sm flex gap-4 items-start">
+                <div class="p-3 bg-provence-600/10 rounded-xl text-provence-600 shrink-0">
+                    <i data-lucide="waves" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-serif font-bold text-provence-800 mb-2">Lac de Saint-Cassien</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Une véritable oasis de fraîcheur au cœur du Pays de Fayence. Ce vaste lac est idéal pour une journée de détente en famille ou entre amis : baignade, location de pédalos, de kayaks, de paddles ou parcours de jeux gonflables.</p>
+                </div>
+            </div>
+
+            <!-- Cannes -->
+            <div class="bg-white p-6 rounded-2xl border border-provence-100 shadow-sm flex gap-4 items-start md:col-span-2">
+                <div class="p-3 bg-provence-600/10 rounded-xl text-provence-600 shrink-0">
+                    <i data-lucide="palmtree" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-serif font-bold text-provence-800 mb-2">Cannes et la Croisette</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Envie d'une escapade maritime ? Rejoignez la célèbre baie de Cannes. Flânez le long de la Croisette ou prenez le large en direction des magnifiques Îles de Lérins pour une parenthèse préservée, entre eaux turquoise et pinède historique.</p>
+                </div>
+            </div>
+
+            <!-- Villages Perchés -->
+            <div class="bg-white p-6 rounded-2xl border border-provence-100 shadow-sm flex gap-4 items-start md:col-span-2">
+                <div class="p-3 bg-provence-600/10 rounded-xl text-provence-600 shrink-0">
+                    <i data-lucide="map" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-serif font-bold text-provence-800 mb-2">Les Villages Perchés du Pays de Grasse</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Partez à la découverte des villages authentiques sentinelles de la Côte d'Azur. De **Cabris** et son panorama spectaculaire allant de Nice au golfe de Saint-Tropez, à **Gourdon** nid d'aigle vertigineux surplombant les Gorges du Loup, en passant par **Mons** ou **Auribeau-sur-Siagne**, chaque étape vous promet fontaines anciennes et charme provençal.</p>
+                </div>
+            </div>
+<!-- Gorges de la Siagne & VTT -->
+            <div class="bg-white p-6 rounded-2xl border border-provence-100 shadow-sm flex gap-4 items-start">
+                <div class="p-3 bg-provence-600/10 rounded-xl text-provence-600 shrink-0">
+                    <i data-lucide="bike" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-serif font-bold text-provence-800 mb-2">Gorges de la Siagne & VTT</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Véritable joyau sauvage accessible depuis le village. En plus des randonnées vers le Pont des Tuves, les Gorges offrent des tracés VTT mémorables entre sous-bois et sentiers escarpés. Un terrain de jeu idéal pour les amateurs de pilotage en pleine nature.</p>
+                </div>
+            </div>
+
+            <!-- Escalade à Saint-Cézaire -->
+            <div class="bg-white p-6 rounded-2xl border border-provence-100 shadow-sm flex gap-4 items-start">
+                <div class="p-3 bg-provence-600/10 rounded-xl text-provence-600 shrink-0">
+                    <i data-lucide="mountain-snow" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-serif font-bold text-provence-800 mb-2">Escalade & Falaises</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Saint-Cézaire est un spot reconnu pour l'escalade. Ses falaises de calcaire offrent des voies variées pour tous les niveaux, avec souvent une vue plongeante sur la rivière. Que vous soyez débutant ou grimpeur confirmé, l'arrière-pays regorge de parois exceptionnelles.</p>
+                </div>
+            </div>
+
+            <!-- Course à pied & Trail -->
+            <div class="bg-white p-6 rounded-2xl border border-provence-100 shadow-sm flex gap-4 items-start">
+                <div class="p-3 bg-provence-600/10 rounded-xl text-provence-600 shrink-0">
+                    <i data-lucide="footprints" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-serif font-bold text-provence-800 mb-2">Course à pied & Trail</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Chaussez vos baskets au départ du Mas ! Entre sentiers techniques en single-track dans les vallons du Pays de Grasse et pistes forestières plus roulantes, les amateurs de course nature et de trail trouveront des parcours au dénivelé idéal pour s'entraîner ou s'évader.</p>
+                </div>
+            </div>
+
+            <!-- Vélo de route (Profil Grimpeur) -->
+            <div class="bg-white p-6 rounded-2xl border border-provence-100 shadow-sm flex gap-4 items-start">
+                <div class="p-3 bg-provence-600/10 rounded-xl text-provence-600 shrink-0">
+                    <i data-lucide="milestone" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-serif font-bold text-provence-800 mb-2">Vélo de Route (Profil Grimpeur)</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Avis aux cyclistes : préparez vos braquets ! Le Mas est le point de départ rêvé pour défier les cols mythiques de l'arrière-pays. Grimpez vers le col de l'Écre, arpentez la route Napoléon ou lancez-vous sur les balcons de la Siagne. Des panoramas à couper le souffle et des pourcentages qui raviront les grimpeurs.</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- Bloc d'appel à l'action discret -->
+        <div class="mt-16 text-center bg-provence-100/50 border border-provence-100 rounded-2xl p-8">
+            <h4 class="text-lg font-serif font-bold text-provence-800 mb-2">Besoin de conseils pour vos itinéraires ?</h4>
+            <p class="text-gray-600 text-sm mb-4">Nous nous ferons un plaisir de vous guider et de partager nos adresses coups de cœur dès votre arrivée au Mas.</p>
+            <div class="mt-12 pt-6 border-t border-provence-100 text-center">
+                <a href="index.html" class="inline-flex items-center text-provence-600 font-medium hover:text-provence-800 transition-colors">
+                    <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i> Retour à l'accueil
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="bg-provence-800 text-provence-100 py-12 text-sm mt-auto">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+            <a href="index.html#accueil">
+                <img src="images/logo.jpg" alt="Logo Le Mas d'Orcyan" class="h-20 w-auto object-contain brightness-110">
+            </a>
+            <div class="flex space-x-6">
+                <a href="autour-du-mas.html" class="hover:text-white font-semibold text-white">Autour du Mas</a>
+                <a href="reglement.html" class="hover:text-white transition-colors">Règlement Intérieur</a>
+                <a href="cgv.html" class="hover:text-white transition-colors">CGV</a>
+                <a href="index.html#contact" class="hover:text-white transition-colors">Contact</a>
+                <a href="mentions-legales.html" class="hover:text-white transition-colors">Mentions Légales</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts pour l'interactivité -->
+    <script>
+        lucide.createIcons();
+
+        // Menu Mobile Hamburger
+        const menuBtn = document.getElementById('menu-btn');
+        const menuMobile = document.getElementById('menu-mobile');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            menuMobile.classList.toggle('hidden');
+            const isHidden = menuMobile.classList.contains('hidden');
+            menuBtn.innerHTML = isHidden ? '<i data-lucide="menu" class="w-8 h-8"></i>' : '<i data-lucide="x" class="w-8 h-8"></i>';
+            lucide.createIcons();
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuMobile.classList.add('hidden');
+                menuBtn.innerHTML = '<i data-lucide="menu" class="w-8 h-8"></i>';
+                lucide.createIcons();
+            });
+        });
+    </script>
+</body>
+</html>

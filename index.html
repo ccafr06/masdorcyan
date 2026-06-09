@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <link rel="icon" href="favicon_masdorcyan_32x32.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="description" content="Le Mas d'Orcyan vous accueille à Saint-Cézaire-sur-Siagne dans un cadre paisible avec piscine, jacuzzi, jardin et chambres de charme à proximité de Grasse et de la Côte d'Azur.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chambres de charme près de Grasse avec piscine et espace bien-être | Le Mas d'Orcyan à Saint-Cézaire-sur-Siagne</title>
+    <!-- Chargement du framework CSS Tailwind pour un design moderne et responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Icônes Lucide pour les éléments visuels -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        provence: {
+                            50: '#f7f8f6',
+                            100: '#edf0eb',
+                            600: '#606c38', /* Vert olive typique */
+                            700: '#4f582e',
+                            800: '#283618',
+                        },
+                        terracotta: '#dda15e',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        section {
+            scroll-margin-top: 7rem;
+        }
+    </style>
+</head>
+<body class="bg-provence-50 text-gray-800 font-sans antialiased">
+
+    <!-- Barre de navigation avec Menu Mobile Hamburger -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-provence-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-28 items-center">
+                <!-- Zone du Logo -->
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center">
+                        <img src="images/logo.jpg" alt="Logo Le Mas d'Orcyan - Le Calme Naturellement" class="h-24 w-auto object-contain py-2">
+                    </a>
+                </div>
+                
+                <!-- Liens Desktop (Masqués sur mobile) -->
+                <div class="hidden md:flex items-center space-x-8 font-medium text-gray-600">
+                    <a href="/" class="hover:text-provence-600 transition-colors">Accueil</a>
+                    <a href="#propos" class="hover:text-provence-600 transition-colors">À Propos</a>
+                    <a href="#chambres" class="hover:text-provence-600 transition-colors">Nos Chambres</a>
+                    <a href="#galerie" class="hover:text-provence-600 transition-colors">Galerie & Bien-être</a>
+                    <a href="#contact" class="bg-provence-600 text-white px-5 py-2.5 rounded-lg hover:bg-provence-700 transition-all shadow-md shadow-provence-600/10">Réserver</a>
+                </div>
+
+                <!-- Bouton Hamburger (Visible uniquement sur mobile) -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-600 hover:text-provence-600 focus:outline-none p-2" aria-label="Ouvrir le menu">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Déroulant Mobile (Masqué par défaut) -->
+        <div id="menu-mobile" class="hidden md:hidden bg-white border-t border-provence-100 shadow-inner">
+            <div class="px-4 pt-2 pb-6 space-y-3 font-medium text-gray-600 flex flex-col text-center">
+                <a href="/" class="mobile-link py-2 hover:bg-provence-50 rounded-lg text-lg">Accueil</a>
+                <a href="#propos" class="mobile-link py-2 hover:bg-provence-50 rounded-lg text-lg">À Propos</a>
+                <a href="#chambres" class="mobile-link py-2 hover:bg-provence-50 rounded-lg text-lg">Nos Chambres</a>
+                <a href="#galerie" class="mobile-link py-2 hover:bg-provence-50 rounded-lg text-lg">Galerie & Bien-être</a>
+                <a href="#contact" class="mobile-link bg-provence-600 text-white py-3 rounded-xl hover:bg-provence-700 transition-all shadow-md">Réserver</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section 1 : Accueil / Hero -->
+    <header id="accueil" class="hero-bg h-[85vh] flex items-center justify-center text-center px-4 pt-28">
+        <div class="max-w-3xl">
+            <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 drop-shadow-sm"> Un Écrin de Douceur sur les Hauteurs de Grasse </h1>
+            <p class="text-xl text-provence-50 mb-8 max-w-2xl mx-auto font-light">Découvrez le charme authentique de Saint-Cézaire-sur-Siagne dans une propriété arborée dédiée à la détente et au bien-être.</p>
+            <a href="#chambres" class="inline-block bg-white text-provence-800 font-semibold px-8 py-4 rounded-xl hover:bg-provence-100 transition-all shadow-lg transform hover:-translate-y-0.5"> Découvrir nos chambres </a>
+        </div>
+    </header>
+
+    <!-- Section 2 : À Propos -->
+    <section id="propos" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-provence-800 mb-6">Bienvenue au Mas d'Orcyan</h2>
+            <div class="w-16 h-1 bg-terracotta mx-auto mb-8 rounded-full"></div>
+            <p class="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                <b>O</b> comme <b>Or</b>, la lumière du soleil et les moments précieux.<br/>
+                <b>R</b> comme <b>Rêve</b>, celui de vacances dont on se souvient longtemps.<br/>
+                <b>C</b> comme <b>Convivialité</b>, parce que les plus beaux souvenirs se partagent.<br/>
+                <b>Y</b> comme <b>Yeux émerveillés</b> devant les paysages.<br/>
+                <b>A</b> comme <b>Azur</b>, le bleu du ciel, de la piscine et de la Siagne.<br/>
+                <b>N</b> comme <b>Nature</b>, généreuse et apaisante.<br/><br/>
+                Au Mas d’Orcyan, on savoure les plaisirs simples : un petit-déjeuner en terrasse, le chant des cigales, une baignade rafraîchissante, une partie de pétanque et de belles soirées sous les étoiles.<br/><br/>
+                À quelques minutes, découvrez Saint-Cézaire-sur-Siagne, village dominant les gorges de la Siagne, ses ruelles pleines de charme, ses terrasses animées et ses marchés du mardi et du samedi matin.<br/><br/>
+                Entre mer et montagne, randonnées, VTT, escalade et panoramas exceptionnels vous attendent.<br/><br/>
+                Le Mas d’Orcyan, c’est une parenthèse de douceur, de simplicité et de bonheur... avec un seul risque : avoir envie de revenir.            
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 3 : Les Chambres (Option lit sur 2 lignes intégrée) -->
+    <section id="chambres" class="py-20 bg-provence-100/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-provence-800 mb-4">Nos chambres de charme</h2>
+                <p class="text-gray-600">Des chambres confortables et indépendantes pour profiter pleinement du calme et de l'authenticité du Mas d'Orcyan. Petit-déjeuner disponible sur demande.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <!-- Chambre Julia -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-provence-100 flex flex-col justify-between">
+                    <div>
+                        <div class="h-64 bg-gray-200 relative">
+                            <img src="images/chambre-julia.png" alt="Chambre Julia" class="w-full h-full object-cover">
+                            <span class="absolute top-4 right-4 bg-provence-800 text-white font-semibold px-4 py-2 rounded-full text-sm">135 € / nuit</span>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-serif font-bold text-provence-800 mb-3">Chambre Julia</h3>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-sm font-semibold uppercase tracking-wider text-terracotta">Douceur de vivre</span>
+                                <span class="bg-provence-600/10 text-provence-700 text-xs font-medium px-2.5 py-0.5 rounded-full flex items-center">
+                                    <i data-lucide="git-fork" class="w-3 h-3 mr-1"></i> lits modulables
+                                </span>
+                            </div>
+                            <p class="text-gray-600 mb-6">Que vous voyagiez en couple ou entre amis, profitez d'une parenthèse de sérénité où chaque instant invite à la détente. Un lieu pensé pour se ressourcer, partager de beaux moments et apprécier pleinement la douceur de vivre.</p>
+                            
+                            <div class="border-t border-gray-100 pt-6">
+                                <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Prestations incluses :</h4>
+                                <ul class="grid grid-cols-2 gap-y-2 text-sm text-gray-600">
+                                    <li class="flex items-center"><i data-lucide="users" class="w-4 h-4 mr-2 text-provence-600"></i> Capacité 2 pers.</li>
+                                    <li class="flex items-center"><i data-lucide="maximize-2" class="w-4 h-4 mr-2 text-provence-600"></i> 24 m² de surface</li>
+                                    <!-- LIT MODULABLE SUR DEUX LIGNES ALIGNÉES -->
+                                    <li class="flex items-start"><i data-lucide="bed" class="w-4 h-4 mr-2 mt-0.5 text-provence-600 shrink-0"></i><div>Lit 160x200 cm<br><span class="text-xs text-gray-400">ou 2 lits de 80x200 cm</span></div></li>
+                                    <li class="flex items-center"><i data-lucide="wind" class="w-4 h-4 mr-2 text-provence-600"></i> Climatisation</li>
+                                    <li class="flex items-center"><i data-lucide="wifi" class="w-4 h-4 mr-2 text-provence-600"></i> Wi-Fi Gratuit</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0">
+                        <a href="#contact" class="block text-center bg-provence-600 hover:bg-provence-700 text-white font-medium py-3 rounded-xl transition-colors">Réserver la chambre Julia</a>
+                    </div>
+                </div>
+
+                <!-- Chambre Novalie -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-provence-100 flex flex-col justify-between">
+                    <div>
+                        <div class="h-64 bg-gray-200 relative">
+                            <img src="images/chambre-novalie.png" alt="Chambre Novalie" class="w-full h-full object-cover">
+                            <span class="absolute top-4 right-4 bg-provence-800 text-white font-semibold px-4 py-2 rounded-full text-sm">135 € / nuit</span>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-serif font-bold text-provence-800 mb-3">Chambre Novalie</h3>
+                            <p class="text-sm font-semibold uppercase tracking-wider text-terracotta mb-4">Ambiance Cosy</p>
+                            <p class="text-gray-600 mb-6">Une parenthèse de sérénité où charme, confort et douceur de vivre se rencontrent. Profitez de votre espace extérieur privatif et laissez-vous porter par le calme et la quiétude des lieux.</p>
+                            
+                            <div class="border-t border-gray-100 pt-6">
+                                <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Prestations incluses :</h4>
+                                <ul class="grid grid-cols-2 gap-y-2 text-sm text-gray-600">
+                                    <li class="flex items-center"><i data-lucide="users" class="w-4 h-4 mr-2 text-provence-600"></i> Capacité 2 pers.</li>
+                                    <li class="flex items-center"><i data-lucide="maximize-2" class="w-4 h-4 mr-2 text-provence-600"></i> 24 m² de surface</li>
+                                    <li class="flex items-center"><i data-lucide="bed" class="w-4 h-4 mr-2 text-provence-600"></i> Lit 160x200 cm</li>
+                                    <li class="flex items-center"><i data-lucide="wind" class="w-4 h-4 mr-2 text-provence-600"></i> Climatisation</li>
+                                    <li class="flex items-center"><i data-lucide="wifi" class="w-4 h-4 mr-2 text-provence-600"></i> Wi-Fi Gratuit</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 pt-0">
+                        <a href="#contact" class="block text-center bg-provence-600 hover:bg-provence-700 text-white font-medium py-3 rounded-xl transition-colors">Réserver la chambre Novalie</a>
+                    </div>
+                </div>
+            </div>
+
+<!-- Équipements Communs Complémentaires (5 colonnes) -->
+<div class="mt-12 bg-white max-w-5xl mx-auto p-6 rounded-xl border border-provence-100 shadow-sm grid grid-cols-2 md:grid-cols-5 gap-4 text-center text-sm text-gray-600">
+    <div class="p-2"><i data-lucide="tv" class="w-5 h-5 mx-auto mb-2 text-terracotta"></i> Télévision incluse</div>
+    <div class="p-2"><i data-lucide="shield-check" class="w-5 h-5 mx-auto mb-2 text-terracotta"></i> Coffre-fort privatif</div>
+    <div class="p-2"><i data-lucide="shower-head" class="w-5 h-5 mx-auto mb-2 text-terracotta"></i> Salle de bain & WC</div>
+    <div class="p-2"><i data-lucide="sun" class="w-5 h-5 mx-auto mb-2 text-terracotta"></i> Terrasse privative</div>
+    <div class="p-2"><i data-lucide="sparkles" class="w-5 h-5 mx-auto mb-2 text-terracotta"></i> Literie haute qualité</div>
+</div>
+        </div>
+    </section>
+
+    <!-- Section 4 : Galerie & Bien-être -->
+    <section id="galerie" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-provence-800 mb-4">Détente & Extérieurs</h2>
+                <p class="text-gray-600">Explorez le domaine et nos infrastructures pensées pour votre bien-être</p>
+            </div>
+
+            <!-- Grille d'activités/équipements -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-provence-50 p-6 rounded-2xl border border-provence-100 text-center">
+                    <div class="w-12 h-12 bg-provence-600/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="droplet" class="w-6 h-6 text-provence-600"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-provence-800 mb-2">Piscine & Détente</h3>
+                    <p class="text-gray-600 text-sm">Quelques longueurs, un moment de lecture sur un transat, le chant des cigales en fond sonore. La piscine du Mas d'Orcyan vous invite à profiter pleinement de l'instant.</p>
+                </div>
+                <div class="bg-provence-50 p-6 rounded-2xl border border-provence-100 text-center">
+                    <div class="w-12 h-12 bg-provence-600/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="activity" class="w-6 h-6 text-provence-600"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-provence-800 mb-2">Bien-être & sérénité</h3>
+                    <p class="text-gray-600 text-sm">Détendez-vous dans notre jacuzzi en libre accès et prolongez ce moment de bien-être avec un massage ou un soin esthétique proposé sur réservation par Laurianne, esthéticienne diplômée, en partenariat avec Riviera Nail Luxury. Aux beaux jours, les massages se savourent en plein air, au cœur du jardin.</p>
+                </div>
+                <div class="bg-provence-50 p-6 rounded-2xl border border-provence-100 text-center">
+                    <div class="w-12 h-12 bg-provence-600/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="trees" class="w-6 h-6 text-provence-600"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-provence-800 mb-2">Jardin & Loisirs</h3>
+                    <p class="text-gray-600 text-sm">Flânez dans le jardin arboré, laissez-vous bercer dans un hamac, partagez une partie de pétanque ou admirez le ciel étoilé...<br/>Au Mas d'Orcyan, les plus beaux moments sont souvent les plus simples.</p>
+                </div>
+            </div>
+
+            <!-- Galerie d'images mosaïque -->
+            <p class="text-gray-600 mb-3 font-medium">Le domaine</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
+                    <img src="images/galerie/001.png" alt="La terrasse et les chambres" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
+                    <img src="images/galerie/002.png" alt="La piscine" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
+                    <img src="images/galerie/003.png" alt="La piscine et le pool house" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
+                    <img src="images/galerie/004.png" alt="Le SPA" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
+                    <img src="images/galerie/008.png" alt="Le terrain de boules" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+            
+            <p class="text-gray-600 mb-3 font-medium">Chambre Julia</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
+                    <img src="images/galerie/007.png" alt="Chambre Julia" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+            
+            <p class="text-gray-600 mb-3 font-medium">Chambre Novalie</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
+                    <img src="images/galerie/005.png" alt="Chambre Novalie" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
+                    <img src="images/galerie/006.png" alt="Chambre Novalie" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5 : Contact, Localisation & Réservation -->
+    <section id="contact" class="py-20 bg-provence-100/50 border-t border-provence-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid lg:grid-cols-2 gap-12 mb-12">
+                
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-terracotta block mb-2">Nous trouver & Nous contacter</span>
+                    <h2 class="text-3xl font-serif font-bold text-provence-800 mb-6">Planifier Votre Séjour</h2>
+                    <p class="text-gray-600 mb-8">Le Mas d’Orcyan se situe idéalement sur les hauteurs de Grasse, au calme de la magnifique commune de Saint-Cézaire-sur-Siagne. Contactez-nous directement par téléphone pour valider vos dates.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-white border border-provence-100 rounded-lg flex items-center justify-center mr-4 shrink-0 text-provence-600">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-provence-800">Adresse</h4>
+                                <p class="text-gray-600 text-sm">407A chemin de la Valmoura,<br>06530 Saint-Cézaire-sur-Siagne</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-white border border-provence-100 rounded-lg flex items-center justify-center mr-4 shrink-0 text-provence-600">
+                                <i data-lucide="navigation"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-provence-800">Coordonnées GPS</h4>
+                                <p class="text-gray-600 text-sm font-mono">Lat: 43.643618 / Lon: 6.808062</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 bg-white border border-provence-100 rounded-lg flex items-center justify-center mr-4 shrink-0 text-provence-600">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-provence-800">Téléphone (Réservations)</h4>
+                                <p class="text-gray-600 text-sm">
+                                    <a href="tel:+33493096562" class="hover:underline">+33 (0)4 93 09 65 62</a><br>
+                                    <a href="tel:+33628466099" class="hover:underline">+33 (0)6 28 46 60 99</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-provence-100">
+                    <h3 class="text-xl font-serif font-bold text-provence-800 mb-6">Demande de disponibilité</h3>
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                        <input type="hidden" name="access_key" value="c50588e0-0f85-48f9-8370-36f1cd67898e">
+                        <input type="hidden" name="redirect" value="http://masdorcyan.free.fr/index.html#contact">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Nom Complet</label>
+                            <input type="text" name="nom" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-provence-600 text-sm">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">E-mail</label>
+                                <input type="email" name="e-mail" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-provence-600 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Téléphone</label>
+                                <input type="tel" name="téléphone" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-provence-600 text-sm">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Chambre souhaitée</label>
+                            <select name="Chambre" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-provence-600 text-sm">
+                                <option>Chambre Julia (135€)</option>
+                                <option>Chambre Novalie (135€)</option>
+                                <option>Les deux chambres</option>
+                            </select>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Date d'arrivée</label>
+                                <input type="date" name="date arrivée" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-provence-600 text-sm text-gray-600">
+                            </div>
+                            <div>
+                                 <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Date de départ</label>
+                                 <input type="date" name="date départ" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-provence-600 text-sm text-gray-600">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Message ou Précisions</label>
+                            <textarea name="Message" rows="4" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-provence-600 text-sm" placeholder="Indiquez vos dates souhaitées..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-provence-800 hover:bg-provence-700 text-white font-semibold py-3.5 rounded-xl transition-colors shadow-md">
+                             Envoyer la demande
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+            <div class="w-full bg-white p-4 rounded-2xl shadow-sm border border-provence-100 overflow-hidden h-[450px]">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1716.7494741942787!2d6.806989961366448!3d43.64365425995256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDM4JzM3LjAiTiA2wrA0OCcyOS4wIkU!5e0!3m2!1sfr!2sfr!4v1706624087800!5m2!1sfr!2sfr" class="w-full h-full rounded-xl" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="bg-provence-800 text-provence-100 py-12 text-sm border-t border-provence-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+            <div class="flex flex-col items-center md:items-start">
+                <img src="images/logo.jpg" alt="Logo Le Mas d'Orcyan" class="h-20 w-auto object-contain mb-3 brightness-110 contrast-105">
+                <p class="text-provence-100/60 text-xs text-center md:text-left">© 2026 Tous droits réservés.</p>
+            </div>
+            <div class="flex space-x-6 text-provence-100/80">
+                <a href="autour-du-mas.html" class="hover:text-white">Autour du Mas</a>
+                <a href="reglement.html" class="hover:text-white transition-colors">Règlement Intérieur</a>
+                <a href="cgv.html" class="hover:text-white transition-colors">CGV</a>
+                <a href="index.html#contact" class="hover:text-white transition-colors">Contact</a>
+                <a href="mentions-legales.html" class="hover:text-white transition-colors">Mentions Légales</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialisation automatique des icônes Lucide -->
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- STRUCTURE DE LA LIGHTBOX -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm hidden items-center justify-center p-4 transition-all duration-300">
+        <button onclick="fermerLightbox()" class="absolute top-6 right-6 text-white/70 hover:text-white transition-colors bg-white/10 hover:bg-white/20 p-3 rounded-full">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <div class="max-w-5xl max-h-[85vh] relative flex flex-col items-center">
+            <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[80vh] rounded-xl object-contain shadow-2xl cursor-pointer">
+            <p id="lightbox-caption" class="text-white/80 font-serif mt-4 text-lg tracking-wide"></p>
+        </div>
+    </div>
+
+    <!-- SCRIPTS JAVASCRIPT (Menu Mobile & Lightbox) -->
+    <script>
+        // Gestion du Menu Hamburger Mobile
+        const menuBtn = document.getElementById('menu-btn');
+        const menuMobile = document.getElementById('menu-mobile');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Ouvrir / Fermer le menu au clic sur le bouton
+        menuBtn.addEventListener('click', () => {
+            menuMobile.classList.toggle('hidden');
+            // Change l'icône de menu à croix si ouvert
+            const isHidden = menuMobile.classList.contains('hidden');
+            menuBtn.innerHTML = isHidden ? '<i data-lucide="menu" class="w-8 h-8"></i>' : '<i data-lucide="x" class="w-8 h-8"></i>';
+            lucide.createIcons(); // Recréer l'icône à la volée
+        });
+
+        // Fermer le menu automatiquement quand on clique sur un lien
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuMobile.classList.add('hidden');
+                menuBtn.innerHTML = '<i data-lucide="menu" class="w-8 h-8"></i>';
+                lucide.createIcons();
+            });
+        });
+
+        // Gestion de la Lightbox (Galerie d'images)
+        function ouvrirLightbox(element) {
+            const image = element.querySelector('img');
+            const srcImage = image.getAttribute('src');
+            const altImage = image.getAttribute('alt');
+            
+            document.getElementById('lightbox-img').src = srcImage;
+            document.getElementById('lightbox-caption').innerText = altImage;
+            
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function fermerLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('flex');
+            lightbox.classList.add('hidden');
+            
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            fermerLightbox();
+        });
+
+        document.getElementById('lightbox-img').addEventListener('click', function(e) {
+            e.stopPropagation(); 
+            fermerLightbox();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") {
+                fermerLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
