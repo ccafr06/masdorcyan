@@ -116,7 +116,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-serif font-bold text-provence-800 mb-4">Nos chambres de charme</h2>
-                <p class="text-gray-600">Des chambres confortables et indépendantes pour profiter pleinement du calme et de l'authenticité du Mas d'Orcyan. Petit-déjeuner disponible sur demande.</p>
+		<p class="text-gray-600">Des chambres confortables et indépendantes pour profiter pleinement du calme et de l'authenticité du Mas d'Orcyan. <br/>Petit-déjeuner disponible sur demande (13 € par personne).</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
@@ -142,10 +142,11 @@
                                 <ul class="grid grid-cols-2 gap-y-2 text-sm text-gray-600">
                                     <li class="flex items-center"><i data-lucide="users" class="w-4 h-4 mr-2 text-provence-600"></i> Capacité 2 pers.</li>
                                     <li class="flex items-center"><i data-lucide="maximize-2" class="w-4 h-4 mr-2 text-provence-600"></i> 24 m² de surface</li>
+                                    <li class="flex items-center"><i data-lucide="wifi" class="w-4 h-4 mr-2 text-provence-600"></i> Wi-Fi Gratuit</li>
+                                    <li class="flex items-center"><i data-lucide="wind" class="w-4 h-4 mr-2 text-provence-600"></i> Climatisation</li>
                                     <!-- LIT MODULABLE SUR DEUX LIGNES ALIGNÉES -->
                                     <li class="flex items-start"><i data-lucide="bed" class="w-4 h-4 mr-2 mt-0.5 text-provence-600 shrink-0"></i><div>Lit 160x200 cm<br><span class="text-xs text-gray-400">ou 2 lits de 80x200 cm</span></div></li>
-                                    <li class="flex items-center"><i data-lucide="wind" class="w-4 h-4 mr-2 text-provence-600"></i> Climatisation</li>
-                                    <li class="flex items-center"><i data-lucide="wifi" class="w-4 h-4 mr-2 text-provence-600"></i> Wi-Fi Gratuit</li>
+				    <li class="flex items-start"><i data-lucide="coffee" class="w-4 h-4 mr-2 mt-0.5 text-provence-600 shrink-0"></i><div>Petit-déjeuner<br><span class="text-xs text-gray-400">En option (13 € / pers.)</span></div></li>
                                 </ul>
                             </div>
                         </div>
@@ -172,9 +173,10 @@
                                 <ul class="grid grid-cols-2 gap-y-2 text-sm text-gray-600">
                                     <li class="flex items-center"><i data-lucide="users" class="w-4 h-4 mr-2 text-provence-600"></i> Capacité 2 pers.</li>
                                     <li class="flex items-center"><i data-lucide="maximize-2" class="w-4 h-4 mr-2 text-provence-600"></i> 24 m² de surface</li>
-                                    <li class="flex items-center"><i data-lucide="bed" class="w-4 h-4 mr-2 text-provence-600"></i> Lit 160x200 cm</li>
-                                    <li class="flex items-center"><i data-lucide="wind" class="w-4 h-4 mr-2 text-provence-600"></i> Climatisation</li>
                                     <li class="flex items-center"><i data-lucide="wifi" class="w-4 h-4 mr-2 text-provence-600"></i> Wi-Fi Gratuit</li>
+                                    <li class="flex items-center"><i data-lucide="wind" class="w-4 h-4 mr-2 text-provence-600"></i> Climatisation</li>
+                                    <li class="flex items-center"><i data-lucide="bed" class="w-4 h-4 mr-2 text-provence-600"></i> Lit 160x200 cm</li>
+				    <li class="flex items-start"><i data-lucide="coffee" class="w-4 h-4 mr-2 mt-0.5 text-provence-600 shrink-0"></i><div>Petit-déjeuner<br><span class="text-xs text-gray-400">En option (13 € / pers.)</span></div></li>
                                 </ul>
                             </div>
                         </div>
@@ -437,11 +439,14 @@
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Chambre souhaitée</label>
-                            <select name="Chambre" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-provence-600 text-sm">
-                                <option>Chambre Julia (135€)</option>
-                                <option>Chambre Novalie (135€)</option>
-                                <option>Les deux chambres</option>
-                            </select>
+				<select name="Chambre" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-provence-600 text-sm">
+    					<option>Chambre Julia (135€) — Sans petit-déjeuner</option>
+    					<option>Chambre Julia (135€) — Avec petit-déjeuner (+13€/pers)</option>
+    					<option>Chambre Novalie (135€) — Sans petit-déjeuner</option>
+    					<option>Chambre Novalie (135€) — Avec petit-déjeuner (+13€/pers)</option>
+    					<option>Les deux chambres (270€) — Sans petit-déjeuner</option>
+    					<option>Les deux chambres (270€) — Avec petit-déjeuner (+13€/pers)</option>
+				</select>
                         </div>
                         <div class="grid grid-cols-2 gap-4">
                             <div>
@@ -455,7 +460,7 @@
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Message ou Précisions</label>
-                            <textarea name="Message" rows="4" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-provence-600 text-sm" placeholder="Indiquez vos dates souhaitées..."></textarea>
+                            <textarea name="Message" rows="4" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-provence-600 text-sm" placeholder="Préciser votre demande..."></textarea>
                         </div>
                         <button type="submit" class="w-full bg-provence-800 hover:bg-provence-700 text-white font-semibold py-3.5 rounded-xl transition-colors shadow-md">
                              Envoyer la demande
