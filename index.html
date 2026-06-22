@@ -6,9 +6,7 @@
     <meta name="description" content="Le Mas d'Orcyan vous accueille à Saint-Cézaire-sur-Siagne dans un cadre paisible avec piscine, jacuzzi, jardin et chambres de charme à proximité de Grasse et de la Côte d'Azur.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chambres de charme près de Grasse avec piscine et espace bien-être | Le Mas d'Orcyan à Saint-Cézaire-sur-Siagne</title>
-    <!-- Chargement du framework CSS Tailwind pour un design moderne et responsive -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Icônes Lucide pour les éléments visuels -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         tailwind.config = {
@@ -28,480 +26,296 @@
             }
         }
     </script>
-    <style>
-        .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/background.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-        section {
-            scroll-margin-top: 7rem;
-        }
-    </style>
 </head>
 <body class="bg-provence-50 text-gray-800 font-sans antialiased">
 
-    <!-- Barre de navigation avec Menu Mobile Hamburger -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-provence-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-28 items-center">
-                <!-- Zone du Logo -->
-                <div class="flex items-center">
-                    <a href="" class="flex items-center">
-                        <img src="images/logo.jpg" alt="Logo Le Mas d'Orcyan - Le Calme Naturellement" class="h-24 w-auto object-contain py-2">
-                    </a>
-                </div>
-                
-                <!-- Liens Desktop (Masqués sur mobile) -->
-                <div class="hidden md:flex items-center space-x-8 font-medium text-gray-600">
-                    <a href="./" class="hover:text-provence-600 transition-colors">Accueil</a>
-                    <a href="#propos" class="hover:text-provence-600 transition-colors">À Propos</a>
-                    <a href="#chambres" class="hover:text-provence-600 transition-colors">Nos Chambres</a>
-                    <a href="#galerie" class="hover:text-provence-600 transition-colors">Galerie & Bien-être</a>
-                    <a href="#contact" class="bg-provence-600 text-white px-5 py-2.5 rounded-lg hover:bg-provence-700 transition-all shadow-md shadow-provence-600/10">Réserver</a>
-                </div>
+    <header id="accueil" class="relative min-h-[90vh] flex flex-col justify-between text-white bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(40, 54, 24, 0.45), rgba(40, 54, 24, 0.35)), url('images/photo_accueil.jpg');">
+        
+        <nav class="w-full bg-black/10 backdrop-blur-sm border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-28 items-center">
+                    <div class="flex items-center">
+                        <a href="#accueil" class="flex items-center">
+                            <img src="images/logo.jpg" alt="Logo Le Mas d'Orcyan" class="h-24 w-auto object-contain py-2 brightness-110 contrast-105">
+                        </a>
+                    </div>
+                    
+                    <div class="hidden md:flex items-center space-x-8 font-medium">
+                        <a href="#propos" class="hover:text-terracotta transition-colors">À Propos</a>
+                        <a href="#chambres" class="hover:text-terracotta transition-colors">Nos Chambres</a>
+                        <a href="#galerie" class="hover:text-terracotta transition-colors">Galerie & Bien-être</a>
+                        <a href="autour-du-mas.html" class="hover:text-terracotta transition-colors">Autour du Mas</a>
+                        <a href="#contact" class="bg-provence-600 px-5 py-2.5 rounded-lg hover:bg-provence-700 transition-all shadow-lg shadow-black/20 font-semibold border border-provence-700">Réserver</a>
+                    </div>
 
-                <!-- Bouton Hamburger (Visible uniquement sur mobile) -->
-                <div class="md:hidden flex items-center">
-                    <button id="menu-btn" class="text-gray-600 hover:text-provence-600 focus:outline-none p-2" aria-label="Ouvrir le menu">
-                        <i data-lucide="menu" class="w-8 h-8"></i>
-                    </button>
+                    <div class="md:hidden flex items-center">
+                        <button id="menu-btn" class="text-white hover:text-terracotta focus:outline-none p-2" aria-label="Ouvrir le menu">
+                            <i data-lucide="menu" class="w-8 h-8"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="menu-mobile" class="hidden md:hidden bg-provence-800 border-t border-provence-700 shadow-xl">
+                <div class="px-4 pt-2 pb-6 space-y-3 font-medium flex flex-col text-center">
+                    <a href="#propos" class="mobile-link py-2 hover:bg-provence-700 rounded-lg text-lg">À Propos</a>
+                    <a href="#chambres" class="mobile-link py-2 hover:bg-provence-700 rounded-lg text-lg">Nos Chambres</a>
+                    <a href="#galerie" class="mobile-link py-2 hover:bg-provence-700 rounded-lg text-lg">Galerie & Bien-être</a>
+                    <a href="autour-du-mas.html" class="mobile-link py-2 hover:bg-provence-700 rounded-lg text-lg">Autour du Mas</a>
+                    <a href="#contact" class="mobile-link bg-provence-600 py-3 rounded-xl hover:bg-provence-700 transition-all shadow-md">Réserver votre séjour</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex-grow flex items-center justify-center text-center px-4">
+            <div class="max-w-3xl bg-black/10 p-8 rounded-2xl backdrop-blur-[2px]">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-4 tracking-wide drop-shadow-md">Le Mas d'Orcyan</h1>
+                <p class="text-lg sm:text-xl md:text-2xl font-light tracking-wider drop-shadow-md max-w-2xl mx-auto">Chambres de charme & espace bien-être à Saint-Cézaire-sur-Siagne</p>
+                <div class="mt-8">
+                    <a href="#chambres" class="inline-block bg-terracotta text-provence-800 px-8 py-3.5 rounded-lg font-semibold hover:bg-white hover:text-provence-800 transition-all shadow-lg transform hover:-translate-y-0.5 text-base">Découvrir nos chambres</a>
                 </div>
             </div>
         </div>
 
-        <!-- Menu Déroulant Mobile (Masqué par défaut) -->
-        <div id="menu-mobile" class="hidden md:hidden bg-white border-t border-provence-100 shadow-inner">
-            <div class="px-4 pt-2 pb-6 space-y-3 font-medium text-gray-600 flex flex-col text-center">
-                <a href="./" class="mobile-link py-2 hover:bg-provence-50 rounded-lg text-lg">Accueil</a>
-                <a href="#propos" class="mobile-link py-2 hover:bg-provence-50 rounded-lg text-lg">À Propos</a>
-                <a href="#chambres" class="mobile-link py-2 hover:bg-provence-50 rounded-lg text-lg">Nos Chambres</a>
-                <a href="#galerie" class="mobile-link py-2 hover:bg-provence-50 rounded-lg text-lg">Galerie & Bien-être</a>
-                <a href="#contact" class="mobile-link bg-provence-600 text-white py-3 rounded-xl hover:bg-provence-700 transition-all shadow-md">Réserver</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Section 1 : Accueil / Hero -->
-    <header id="accueil" class="hero-bg h-[85vh] flex items-center justify-center text-center px-4 pt-28">
-        <div class="max-w-3xl">
-            <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 drop-shadow-sm"> Un Écrin de Douceur sur les Hauteurs de Grasse </h1>
-            <p class="text-xl text-provence-50 mb-8 max-w-2xl mx-auto font-light">Découvrez le charme authentique de Saint-Cézaire-sur-Siagne dans une propriété arborée dédiée à la détente et au bien-être.</p>
-            <a href="#chambres" class="inline-block bg-white text-provence-800 font-semibold px-8 py-4 rounded-xl hover:bg-provence-100 transition-all shadow-lg transform hover:-translate-y-0.5"> Découvrir nos chambres </a>
+        <div class="pb-6 text-center animate-bounce">
+            <a href="#propos" aria-label="Défiler vers le bas">
+                <i data-lucide="chevron-down" class="w-8 h-8 mx-auto text-white/80 hover:text-white"></i>
+            </a>
         </div>
     </header>
 
-    <!-- Section 2 : À Propos -->
-    <section id="propos" class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-serif font-bold text-provence-800 mb-6">Bienvenue au Mas d'Orcyan</h2>
-            <div class="w-16 h-1 bg-terracotta mx-auto mb-8 rounded-full"></div>
-            <p class="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                <b>O</b> comme <b>Or</b>, la lumière du soleil et les moments précieux.<br/>
-                <b>R</b> comme <b>Rêve</b>, celui de vacances dont on se souvient longtemps.<br/>
-                <b>C</b> comme <b>Convivialité</b>, parce que les plus beaux souvenirs se partagent.<br/>
-                <b>Y</b> comme <b>Yeux émerveillés</b> devant les paysages.<br/>
-                <b>A</b> comme <b>Azur</b>, le bleu du ciel, de la piscine et de la Siagne.<br/>
-                <b>N</b> comme <b>Nature</b>, généreuse et apaisante.<br/><br/>
-                Au Mas d’Orcyan, on savoure les plaisirs simples : un petit-déjeuner en terrasse, le chant des cigales, une baignade rafraîchissante, une partie de pétanque et de belles soirées sous les étoiles.<br/><br/>
-                À quelques minutes, découvrez Saint-Cézaire-sur-Siagne, village dominant les gorges de la Siagne, ses ruelles pleines de charme, ses terrasses animées et ses marchés du mardi et du samedi matin.<br/><br/>
-                Entre mer et montagne, randonnées, VTT, escalade et panoramas exceptionnels vous attendent.<br/><br/>
-                Le Mas d’Orcyan, c’est une parenthèse de douceur, de simplicité et de bonheur... avec un seul risque : avoir envie de revenir.            
-            </p>
-        </div>
-    </section>
-
-    <!-- Section 3 : Les Chambres (Option lit sur 2 lignes intégrée) -->
-    <section id="chambres" class="py-20 bg-provence-100/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-provence-800 mb-4">Nos chambres de charme</h2>
-                <p class="text-gray-600">Des chambres confortables et indépendantes pour profiter pleinement du calme et de l'authenticité du Mas d'Orcyan. Petit-déjeuner disponible sur demande.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-                <!-- Chambre Julia -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-provence-100 flex flex-col justify-between">
-                    <div>
-                        <div class="h-64 bg-gray-200 relative">
-                            <img src="images/chambre-julia.png" alt="Chambre Julia" class="w-full h-full object-cover">
-                            <span class="absolute top-4 right-4 bg-provence-800 text-white font-semibold px-4 py-2 rounded-full text-sm">135 € / nuit</span>
-                        </div>
-                        <div class="p-8">
-                            <h3 class="text-2xl font-serif font-bold text-provence-800 mb-3">Chambre Julia</h3>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="text-sm font-semibold uppercase tracking-wider text-terracotta">Douceur de vivre</span>
-                                <span class="bg-provence-600/10 text-provence-700 text-xs font-medium px-2.5 py-0.5 rounded-full flex items-center">
-                                    <i data-lucide="git-fork" class="w-3 h-3 mr-1"></i> lits modulables
-                                </span>
-                            </div>
-                            <p class="text-gray-600 mb-6">Que vous voyagiez en couple ou entre amis, profitez d'une parenthèse de sérénité où chaque instant invite à la détente. Un lieu pensé pour se ressourcer, partager de beaux moments et apprécier pleinement la douceur de vivre.</p>
-                            
-                            <div class="border-t border-gray-100 pt-6">
-                                <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Prestations incluses :</h4>
-                                <ul class="grid grid-cols-2 gap-y-2 text-sm text-gray-600">
-                                    <li class="flex items-center"><i data-lucide="users" class="w-4 h-4 mr-2 text-provence-600"></i> Capacité 2 pers.</li>
-                                    <li class="flex items-center"><i data-lucide="maximize-2" class="w-4 h-4 mr-2 text-provence-600"></i> 24 m² de surface</li>
-                                    <!-- LIT MODULABLE SUR DEUX LIGNES ALIGNÉES -->
-                                    <li class="flex items-start"><i data-lucide="bed" class="w-4 h-4 mr-2 mt-0.5 text-provence-600 shrink-0"></i><div>Lit 160x200 cm<br><span class="text-xs text-gray-400">ou 2 lits de 80x200 cm</span></div></li>
-                                    <li class="flex items-center"><i data-lucide="wind" class="w-4 h-4 mr-2 text-provence-600"></i> Climatisation</li>
-                                    <li class="flex items-center"><i data-lucide="wifi" class="w-4 h-4 mr-2 text-provence-600"></i> Wi-Fi Gratuit</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-8 pt-0">
-                        <a href="#contact" class="block text-center bg-provence-600 hover:bg-provence-700 text-white font-medium py-3 rounded-xl transition-colors">Réserver la chambre Julia</a>
-                    </div>
-                </div>
-
-                <!-- Chambre Novalie -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-provence-100 flex flex-col justify-between">
-                    <div>
-                        <div class="h-64 bg-gray-200 relative">
-                            <img src="images/chambre-novalie.png" alt="Chambre Novalie" class="w-full h-full object-cover">
-                            <span class="absolute top-4 right-4 bg-provence-800 text-white font-semibold px-4 py-2 rounded-full text-sm">135 € / nuit</span>
-                        </div>
-                        <div class="p-8">
-                            <h3 class="text-2xl font-serif font-bold text-provence-800 mb-3">Chambre Novalie</h3>
-                            <p class="text-sm font-semibold uppercase tracking-wider text-terracotta mb-4">Ambiance Cosy</p>
-                            <p class="text-gray-600 mb-6">Une parenthèse de sérénité où charme, confort et douceur de vivre se rencontrent. Profitez de votre espace extérieur privatif et laissez-vous porter par le calme et la quiétude des lieux.</p>
-                            
-                            <div class="border-t border-gray-100 pt-6">
-                                <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Prestations incluses :</h4>
-                                <ul class="grid grid-cols-2 gap-y-2 text-sm text-gray-600">
-                                    <li class="flex items-center"><i data-lucide="users" class="w-4 h-4 mr-2 text-provence-600"></i> Capacité 2 pers.</li>
-                                    <li class="flex items-center"><i data-lucide="maximize-2" class="w-4 h-4 mr-2 text-provence-600"></i> 24 m² de surface</li>
-                                    <li class="flex items-center"><i data-lucide="bed" class="w-4 h-4 mr-2 text-provence-600"></i> Lit 160x200 cm</li>
-                                    <li class="flex items-center"><i data-lucide="wind" class="w-4 h-4 mr-2 text-provence-600"></i> Climatisation</li>
-                                    <li class="flex items-center"><i data-lucide="wifi" class="w-4 h-4 mr-2 text-provence-600"></i> Wi-Fi Gratuit</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-8 pt-0">
-                        <a href="#contact" class="block text-center bg-provence-600 hover:bg-provence-700 text-white font-medium py-3 rounded-xl transition-colors">Réserver la chambre Novalie</a>
-                    </div>
-                </div>
-            </div>
-
-<!-- Équipements Communs Complémentaires (5 colonnes) -->
-<div class="mt-12 bg-white max-w-5xl mx-auto p-6 rounded-xl border border-provence-100 shadow-sm grid grid-cols-2 md:grid-cols-5 gap-4 text-center text-sm text-gray-600">
-    <div class="p-2"><i data-lucide="tv" class="w-5 h-5 mx-auto mb-2 text-terracotta"></i> Télévision incluse</div>
-    <div class="p-2"><i data-lucide="shield-check" class="w-5 h-5 mx-auto mb-2 text-terracotta"></i> Coffre-fort privatif</div>
-    <div class="p-2"><i data-lucide="shower-head" class="w-5 h-5 mx-auto mb-2 text-terracotta"></i> Salle de bain & WC</div>
-    <div class="p-2"><i data-lucide="sun" class="w-5 h-5 mx-auto mb-2 text-terracotta"></i> Terrasse privative</div>
-    <div class="p-2"><i data-lucide="sparkles" class="w-5 h-5 mx-auto mb-2 text-terracotta"></i> Literie haute qualité</div>
-</div>
-        </div>
-    </section>
-
-    <!-- Section 4 : Galerie & Bien-être -->
-    <section id="galerie" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-provence-800 mb-4">Détente & Extérieurs</h2>
-                <p class="text-gray-600">Explorez le domaine et nos infrastructures pensées pour votre bien-être</p>
-            </div>
-
-            <!-- Grille d'activités/équipements -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div class="bg-provence-50 p-6 rounded-2xl border border-provence-100 text-center">
-                    <div class="w-12 h-12 bg-provence-600/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="droplet" class="w-6 h-6 text-provence-600"></i>
-                    </div>
-                    <h3 class="text-xl font-serif font-semibold text-provence-800 mb-2">Piscine & Détente</h3>
-                    <p class="text-gray-600 text-sm">Quelques longueurs, un moment de lecture sur un transat, le chant des cigales en fond sonore. La piscine du Mas d'Orcyan vous invite à profiter pleinement de l'instant.</p>
-                </div>
-                <div class="bg-provence-50 p-6 rounded-2xl border border-provence-100 text-center">
-                    <div class="w-12 h-12 bg-provence-600/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="activity" class="w-6 h-6 text-provence-600"></i>
-                    </div>
-                    <h3 class="text-xl font-serif font-semibold text-provence-800 mb-2">Bien-être & sérénité</h3>
-                    <p class="text-gray-600 text-sm">Détendez-vous dans notre jacuzzi en libre accès et prolongez ce moment de bien-être avec un massage ou un soin esthétique proposé sur réservation par Laurianne, esthéticienne diplômée, en partenariat avec Riviera Nail Luxury. Aux beaux jours, les massages se savourent en plein air, au cœur du jardin.</p>
-                </div>
-                <div class="bg-provence-50 p-6 rounded-2xl border border-provence-100 text-center">
-                    <div class="w-12 h-12 bg-provence-600/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="trees" class="w-6 h-6 text-provence-600"></i>
-                    </div>
-                    <h3 class="text-xl font-serif font-semibold text-provence-800 mb-2">Jardin & Loisirs</h3>
-                    <p class="text-gray-600 text-sm">Flânez dans le jardin arboré, laissez-vous bercer dans un hamac, partagez une partie de pétanque ou admirez le ciel étoilé...<br/>Au Mas d'Orcyan, les plus beaux moments sont souvent les plus simples.</p>
-                </div>
-            </div>
-
-            <!-- Galerie d'images mosaïque -->
-            <p class="text-gray-600 mb-3 font-medium">Piscine & Détente</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/002.png" alt="La piscine" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/003.png" alt="La piscine et le pool house" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/017.png" alt="La piscine" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/018.png" alt="La piscine" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-            </div>
-            
-            <p class="text-gray-600 mb-3 font-medium">Bien-être & sérénité</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-               <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/004.png" alt="Le SPA" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/030.jpg" alt="Le jardin" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/041.png" alt="Le jardin" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/040.jpg" alt="Le jardin" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-            </div>
-            
-            <p class="text-gray-600 mb-3 font-medium">Jardin & Loisirs</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/001.png" alt="Les chambres" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/042.jpg" alt="Le jardin" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/008.png" alt="Le terrain de boules" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/045.jpg" alt="Le terrain de boules" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/044.jpg" alt="Le jardin" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/036.jpg" alt="Le jardin" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-            </div>
-            
-            <p class="text-gray-600 mb-3 font-medium">Chambre Julia</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/007.png" alt="Chambre Julia" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/010.png" alt="Chambre Julia" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/011.png" alt="Chambre Julia" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/012.png" alt="Chambre Julia" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/013.png" alt="Chambre Julia" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/014.png" alt="Chambre Julia" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/015.png" alt="Chambre Julia" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/046.png" alt="La terrasse" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-            </div>
-            
-            <p class="text-gray-600 mb-3 font-medium">Chambre Novalie</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/005.png" alt="Chambre Novalie" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/006.png" alt="Chambre Novalie" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/020.jpg" alt="Chambre Novalie" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/021.jpg" alt="Chambre Novalie" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/022.png" alt="Chambre Novalie" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/023.png" alt="Chambre Novalie" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-            </div>
-            <br/>
-            <p class="text-gray-600 mb-3 font-medium">Votre arrivée au Mas</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/048.jpg" alt="Le portail" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/047.jpg" alt="Le portail" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/049.png" alt="Le parking" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="h-48 bg-gray-200 rounded-xl overflow-hidden cursor-pointer" onclick="ouvrirLightbox(this)">
-                    <img src="images/galerie/033.jpg" alt="L'allée principale" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-             </div>
-        </div>
-    </section>
-
-    <!-- Section 5 : Contact, Localisation & Réservation -->
-    <section id="contact" class="py-20 bg-provence-100/50 border-t border-provence-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="grid lg:grid-cols-2 gap-12 mb-12">
+    <section id="propos" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-provence-600 uppercase tracking-widest font-semibold text-sm flex items-center gap-2">
+                    <span class="w-8 h-[2px] bg-provence-600"></span> Havre de paix en Provence
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-provence-800 leading-tight">Une parenthèse enchantée dans l'arrière-pays grassois</h2>
+                <p class="text-gray-600 leading-relaxed text-base">Niché au cœur du charmant village perché de Saint-Cézaire-sur-Siagne, à seulement quelques minutes de Grasse, capitale mondiale des parfums, le Mas d'Orcyan vous ouvre ses portes pour une escale de sérénité absolue.</p>
+                <p class="text-gray-600 leading-relaxed text-base">Dans un environnement verdoyant, calme et reposant, notre propriété met à votre disposition ses aménagements pensés pour votre confort et votre détente : une superbe piscine, un jacuzzi relaxant ainsi qu'un terrain de pétanque pour de vrais moments de convivialité sudiste.</p>
                 
+                <div class="grid grid-cols-2 gap-4 pt-4 text-sm font-medium text-gray-700">
+                    <div class="flex items-center gap-2.5"><i data-lucide="circle-check" class="w-5 h-5 text-provence-600 shrink-0"></i> Piscine extérieure en libre accès</div>
+                    <div class="flex items-center gap-2.5"><i data-lucide="circle-check" class="w-5 h-5 text-provence-600 shrink-0"></i> Jacuzzi & espace détente</div>
+                    <div class="flex items-center gap-2.5"><i data-lucide="circle-check" class="w-5 h-5 text-provence-600 shrink-0"></i> Terrain de pétanque ombragé</div>
+                    <div class="flex items-center gap-2.5"><i data-lucide="circle-check" class="w-5 h-5 text-provence-600 shrink-0"></i> Entrées totalement indépendantes</div>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <div class="absolute inset-0 bg-terracotta/10 rounded-2xl transform translate-x-4 translate-y-4 -z-10"></div>
+                <img src="images/photo_propos.jpg" alt="Le jardin du Mas d'Orcyan" class="rounded-2xl shadow-xl w-full object-cover h-[450px]">
+            </div>
+        </div>
+    </section>
+
+    <div class="max-w-4xl mx-auto mb-16 px-4">
+        <div class="bg-white border border-provence-100 rounded-2xl p-6 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-4 text-center sm:text-left flex-col sm:flex-row">
+                <div class="bg-provence-50 p-3 rounded-full text-provence-600">
+                    <i data-lucide="info" class="w-6 h-6"></i>
+                </div>
                 <div>
-                    <span class="text-xs font-semibold uppercase tracking-wider text-terracotta block mb-2">Nous trouver & Nous contacter</span>
-                    <h2 class="text-3xl font-serif font-bold text-provence-800 mb-6">Planifier Votre Séjour</h2>
-                    <p class="text-gray-600 mb-8">Le Mas d’Orcyan se situe idéalement sur les hauteurs de Grasse, au calme de la magnifique commune de Saint-Cézaire-sur-Siagne. Contactez-nous directement par téléphone pour valider vos dates.</p>
+                    <h4 class="font-serif font-bold text-provence-800 text-lg">Établissement entièrement non-fumeur</h4>
+                    <p class="text-sm text-gray-600 mt-0.5">Pour le confort de tous et la prévention des risques d'incendie, l'intérieur du Mas et l'ensemble du jardin sont non-fumeurs.</p>
+                </div>
+            </div>
+            <div class="text-xs bg-provence-100/70 text-provence-800 px-4 py-2.5 rounded-xl font-medium text-center sm:text-right shrink-0">
+                Exception : Terrasses privatives<br><span class="text-gray-500 font-normal">(cendrier sécurisé fourni sur demande)</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="chambres" class="bg-provence-100/50 py-20 border-y border-provence-100/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-provence-800">Nos Chambres de Charme</h2>
+                <div class="w-16 h-1 bg-terracotta mx-auto my-4 rounded-full"></div>
+                <p class="text-gray-600">Pour garantir votre intimité et un confort optimal, nos deux chambres disposent d'un accès extérieur privatif indépendant.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-provence-100/60 flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1">
+                    <div>
+                        <img src="images/chambre1.jpg" alt="Chambre d'hôtes de charme 1" class="w-full h-64 object-cover">
+                        <div class="p-6 lg:p-8">
+                            <h3 class="text-2xl font-serif font-bold text-provence-800 mb-3">Première Chambre</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-6">Décorée avec soin dans un esprit provençal épuré, cette chambre spacieuse vous offre un cocon douillet. Elle dispose d'une literie haut de gamme, d'un accès direct sur l'extérieur et d'une salle d'eau contemporaine parfaitement équipée.</p>
+                            <div class="border-t border-gray-100 pt-4 grid grid-cols-2 gap-y-2 gap-x-4 text-xs font-medium text-gray-500">
+                                <div class="flex items-center gap-2"><i data-lucide="door-closed" class="w-4 h-4 text-provence-600"></i> Entrée indépendante</div>
+                                <div class="flex items-center gap-2"><i data-lucide="bath" class="w-4 h-4 text-provence-600"></i> Salle d'eau privative</div>
+                                <div class="flex items-center gap-2"><i data-lucide="wifi" class="w-4 h-4 text-provence-600"></i> Wi-Fi gratuit</div>
+                                <div class="flex items-center gap-2"><i data-lucide="coffee" class="w-4 h-4 text-provence-600"></i> Petit-déjeuner optionnel</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 lg:px-8 pb-6 lg:pb-8">
+                        <a href="#contact" class="block text-center bg-provence-600 text-white font-medium py-2.5 rounded-lg hover:bg-provence-700 transition-all text-sm shadow-md shadow-provence-600/10">Demander la disponibilité</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-provence-100/60 flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1">
+                    <div>
+                        <img src="images/chambre2.jpg" alt="Chambre d'hôtes de charme 2" class="w-full h-64 object-cover">
+                        <div class="p-6 lg:p-8">
+                            <h3 class="text-2xl font-serif font-bold text-provence-800 mb-3">Seconde Chambre</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-6">Alliant charme d'autrefois et confort moderne, cette seconde chambre indépendante saura vous séduire par sa luminosité et son calme absolu. Sa salle d'eau privative intégrée complète parfaitement cet espace de repos.</p>
+                            <div class="border-t border-gray-100 pt-4 grid grid-cols-2 gap-y-2 gap-x-4 text-xs font-medium text-gray-500">
+                                <div class="flex items-center gap-2"><i data-lucide="door-closed" class="w-4 h-4 text-provence-600"></i> Entrée indépendante</div>
+                                <div class="flex items-center gap-2"><i data-lucide="bath" class="w-4 h-4 text-provence-600"></i> Salle d'eau privative</div>
+                                <div class="flex items-center gap-2"><i data-lucide="wifi" class="w-4 h-4 text-provence-600"></i> Wi-Fi gratuit</div>
+                                <div class="flex items-center gap-2"><i data-lucide="coffee" class="w-4 h-4 text-provence-600"></i> Petit-déjeuner optionnel</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-6 lg:px-8 pb-6 lg:pb-8">
+                        <a href="#contact" class="block text-center bg-provence-600 text-white font-medium py-2.5 rounded-lg hover:bg-provence-700 transition-all text-sm shadow-md shadow-provence-600/10">Demander la disponibilité</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="galerie" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-provence-800">Détente, Bien-être & Jardin</h2>
+            <div class="w-16 h-1 bg-terracotta mx-auto my-4 rounded-full"></div>
+            <p class="text-gray-600">Profitez pleinement de nos espaces pensés pour votre ressourcement au cœur de la Côte d'Azur.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="group relative cursor-pointer overflow-hidden rounded-xl shadow-md aspect-square" onclick="ouvrirLightbox(this)">
+                <img src="images/galerie_piscine.jpg" alt="La grande piscine ensoleillée du domaine" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white font-medium text-sm">Agrandir</div>
+            </div>
+            <div class="group relative cursor-pointer overflow-hidden rounded-xl shadow-md aspect-square" onclick="ouvrirLightbox(this)">
+                <img src="images/galerie_jacuzzi.jpg" alt="Le jacuzzi chauffé pour vos fins de journées" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white font-medium text-sm">Agrandir</div>
+            </div>
+            <div class="group relative cursor-pointer overflow-hidden rounded-xl shadow-md aspect-square" onclick="ouvrirLightbox(this)">
+                <img src="images/galerie_jardin.jpg" alt="Le jardin arboré et les espaces ombragés" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white font-medium text-sm">Agrandir</div>
+            </div>
+            <div class="group relative cursor-pointer overflow-hidden rounded-xl shadow-md aspect-square" onclick="ouvrirLightbox(this)">
+                <img src="images/galerie_petanque.jpg" alt="Le terrain de pétanque traditionnel" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white font-medium text-sm">Agrandir</div>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="fixed inset-0 bg-black/95 z-50 hidden flex-col justify-center items-center p-4 backdrop-blur-sm animate-fade-in">
+        <button class="absolute top-6 right-6 text-white/80 hover:text-white transition-colors p-2 focus:outline-none" onclick="fermerLightbox()" aria-label="Fermer la vue plein écran">
+            <i data-lucide="x" class="w-10 h-10"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[80vh] rounded-lg shadow-2xl object-contain select-none">
+        <p id="lightbox-caption" class="text-white/90 text-center mt-4 font-medium max-w-xl text-base tracking-wide"></p>
+    </div>
+
+    <section id="contact" class="bg-provence-800 text-white py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(221,161,94,0.1),transparent_45%)]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-5 gap-12 items-start">
+                
+                <div class="md:col-span-2 space-y-6">
+                    <span class="text-terracotta uppercase tracking-widest font-semibold text-sm flex items-center gap-2">
+                        <span class="w-8 h-[2px] bg-terracotta"></span> Planifiez votre séjour
+                    </span>
+                    <h2 class="text-3xl font-serif font-bold tracking-wide">Demande de réservation</h2>
+                    <p class="text-provence-100/80 leading-relaxed text-sm">Indiquez-nous vos dates souhaitées. Nous vous répondrons par e-mail dans les plus brefs délais pour valider ensemble vos modalités d'accueil.</p>
                     
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 bg-white border border-provence-100 rounded-lg flex items-center justify-center mr-4 shrink-0 text-provence-600">
-                                <i data-lucide="map-pin"></i>
-                            </div>
+                    <div class="space-y-4 pt-4 text-sm font-medium">
+                        <div class="flex items-center gap-4 bg-provence-700/40 p-3.5 rounded-xl border border-provence-700">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-terracotta shrink-0"></i>
                             <div>
-                                <h4 class="font-semibold text-provence-800">Adresse</h4>
-                                <p class="text-gray-600 text-sm">407A chemin de la Valmoura,<br>06530 Saint-Cézaire-sur-Siagne</p>
+                                <p class="text-xs text-provence-100/50">Adresse du domaine</p>
+                                <p class="text-provence-50">407A chemin de la Valmoura, 06530 Saint-Cézaire-sur-Siagne</p>
                             </div>
                         </div>
-
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 bg-white border border-provence-100 rounded-lg flex items-center justify-center mr-4 shrink-0 text-provence-600">
-                                <i data-lucide="navigation"></i>
-                            </div>
+                        <div class="flex items-center gap-4 bg-provence-700/40 p-3.5 rounded-xl border border-provence-700">
+                            <i data-lucide="phone" class="w-5 h-5 text-terracotta shrink-0"></i>
                             <div>
-                                <h4 class="font-semibold text-provence-800">Coordonnées GPS</h4>
-                                <p class="text-gray-600 text-sm font-mono">Lat: 43.643618 / Lon: 6.808062</p>
+                                <p class="text-xs text-provence-100/50">Téléphone</p>
+                                <p class="text-provence-50">+33 (0)4 93 09 65 62</p>
                             </div>
                         </div>
-
-                        <div class="flex items-start">
-                            <div class="w-10 h-10 bg-white border border-provence-100 rounded-lg flex items-center justify-center mr-4 shrink-0 text-provence-600">
-                                <i data-lucide="phone"></i>
-                            </div>
+                        <div class="flex items-center gap-4 bg-provence-700/40 p-3.5 rounded-xl border border-provence-700">
+                            <i data-lucide="mail" class="w-5 h-5 text-terracotta shrink-0"></i>
                             <div>
-                                <h4 class="font-semibold text-provence-800">Téléphone (Réservations)</h4>
-                                <p class="text-gray-600 text-sm">
-                                    <a href="tel:+33493096562" class="hover:underline">+33 (0)4 93 09 65 62</a><br>
-                                </p>
+                                <p class="text-xs text-provence-100/50">E-mail direct</p>
+                                <p class="text-provence-50">masdorcyan@free.fr</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-provence-100">
-                    <h3 class="text-xl font-serif font-bold text-provence-800 mb-6">Demande de disponibilité</h3>
-                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                        <input type="hidden" name="access_key" value="c50588e0-0f85-48f9-8370-36f1cd67898e">
-                        <input type="hidden" name="redirect" value="http://masdorcyan.free.fr/index.html#contact">
-                        <div>
-                            <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Nom Complet</label>
-                            <input type="text" name="nom" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-provence-600 text-sm">
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">E-mail</label>
-                                <input type="email" name="e-mail" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-provence-600 text-sm">
+                <div class="md:col-span-3 bg-white text-gray-800 p-6 sm:p-10 rounded-2xl shadow-2xl border border-provence-100 w-full">
+                    <form action="#" method="POST" class="space-y-4 text-sm">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="space-y-1">
+                                <label for="nom" class="font-medium text-gray-700">Nom complet</label>
+                                <input type="text" id="nom" name="nom" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:border-provence-600 transition-colors bg-gray-50/50">
                             </div>
-                            <div>
-                                <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Téléphone</label>
-                                <input type="tel" name="téléphone" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-provence-600 text-sm">
+                            <div class="space-y-1">
+                                <label for="email" class="font-medium text-gray-700">Adresse e-mail</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:border-provence-600 transition-colors bg-gray-50/50">
                             </div>
                         </div>
-                        <div>
-                            <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Chambre souhaitée</label>
-                            <select name="Chambre" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-provence-600 text-sm">
-                                <option>Chambre Julia (135€)</option>
-                                <option>Chambre Novalie (135€)</option>
-                                <option>Les deux chambres</option>
-                            </select>
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Date d'arrivée</label>
-                                <input type="date" name="date arrivée" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-provence-600 text-sm text-gray-600">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="space-y-1">
+                                <label for="arrivee" class="font-medium text-gray-700">Date d'arrivée</label>
+                                <input type="date" id="arrivee" name="arrivee" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:border-provence-600 transition-colors bg-gray-50/50">
                             </div>
-                            <div>
-                                 <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Date de départ</label>
-                                 <input type="date" name="date départ" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-provence-600 text-sm text-gray-600">
+                            <div class="space-y-1">
+                                <label for="depart" class="font-medium text-gray-700">Date de départ</label>
+                                <input type="date" id="depart" name="depart" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:border-provence-600 transition-colors bg-gray-50/50">
                             </div>
                         </div>
-                        <div>
-                            <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Message ou Précisions</label>
-                            <textarea name="Message" rows="4" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-provence-600 text-sm" placeholder="Indiquez vos dates souhaitées..."></textarea>
+                        <div class="space-y-1">
+                            <label for="message" class="font-medium text-gray-700">Message & demandes particulières</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Précisez la chambre souhaitée ou vos questions..." class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:border-provence-600 transition-colors bg-gray-50/50 resize-y"></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-provence-800 hover:bg-provence-700 text-white font-semibold py-3.5 rounded-xl transition-colors shadow-md">
-                             Envoyer la demande
-                        </button>
+                        <button type="submit" class="w-full bg-provence-600 text-white font-semibold py-3 rounded-lg hover:bg-provence-700 transition-all shadow-md shadow-provence-600/10 text-base">Envoyer la demande de disponibilité</button>
                     </form>
                 </div>
 
             </div>
-            <div class="w-full bg-white p-4 rounded-2xl shadow-sm border border-provence-100 overflow-hidden h-[450px]">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1716.7494741942787!2d6.806989961366448!3d43.64365425995256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDM4JzM3LjAiTiA2wrA0OCcyOS4wIkU!5e0!3m2!1sfr!2sfr!4v1706624087800!5m2!1sfr!2sfr" class="w-full h-full rounded-xl" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
         </div>
     </section>
 
-    <!-- Pied de page -->
     <footer class="bg-provence-800 text-provence-100 py-12 text-sm border-t border-provence-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             <div class="flex flex-col items-center md:items-start">
                 <img src="images/logo.jpg" alt="Logo Le Mas d'Orcyan" class="h-20 w-auto object-contain mb-3 brightness-110 contrast-105">
                 <p class="text-provence-100/60 text-xs text-center md:text-left">© 2026 Tous droits réservés.</p>
             </div>
-            <div class="flex space-x-6 text-provence-100/80">
-                <a href="autour-du-mas.html" class="hover:text-white">Autour du Mas</a>
+            <div class="flex flex-wrap justify-center gap-6 text-provence-100/80 font-medium">
+                <a href="autour-du-mas.html" class="hover:text-white transition-colors">Autour du Mas</a>
                 <a href="reglement.html" class="hover:text-white transition-colors">Règlement Intérieur</a>
                 <a href="cgv.html" class="hover:text-white transition-colors">CGV</a>
-                <a href="index.html#contact" class="hover:text-white transition-colors">Contact</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
                 <a href="mentions-legales.html" class="hover:text-white transition-colors">Mentions Légales</a>
             </div>
         </div>
     </footer>
 
-    <!-- Initialisation automatique des icônes Lucide -->
     <script>
+        // Initialisation des icônes Lucide
         lucide.createIcons();
-    </script>
 
-    <!-- STRUCTURE DE LA LIGHTBOX -->
-    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm hidden items-center justify-center p-4 transition-all duration-300">
-        <button onclick="fermerLightbox()" class="absolute top-6 right-6 text-white/70 hover:text-white transition-colors bg-white/10 hover:bg-white/20 p-3 rounded-full">
-            <i data-lucide="x" class="w-8 h-8"></i>
-        </button>
-        <div class="max-w-5xl max-h-[85vh] relative flex flex-col items-center">
-            <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[80vh] rounded-xl object-contain shadow-2xl cursor-pointer">
-            <p id="lightbox-caption" class="text-white/80 font-serif mt-4 text-lg tracking-wide"></p>
-        </div>
-    </div>
-
-    <!-- SCRIPTS JAVASCRIPT (Menu Mobile & Lightbox) -->
-    <script>
-        // Gestion du Menu Hamburger Mobile
+        // Gestion du Menu Mobile Hamburger
         const menuBtn = document.getElementById('menu-btn');
         const menuMobile = document.getElementById('menu-mobile');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        // Ouvrir / Fermer le menu au clic sur le bouton
         menuBtn.addEventListener('click', () => {
             menuMobile.classList.toggle('hidden');
-            // Change l'icône de menu à croix si ouvert
             const isHidden = menuMobile.classList.contains('hidden');
             menuBtn.innerHTML = isHidden ? '<i data-lucide="menu" class="w-8 h-8"></i>' : '<i data-lucide="x" class="w-8 h-8"></i>';
-            lucide.createIcons(); // Recréer l'icône à la volée
+            lucide.createIcons();
         });
 
-        // Fermer le menu automatiquement quand on clique sur un lien
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 menuMobile.classList.add('hidden');

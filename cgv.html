@@ -166,12 +166,12 @@
 
             <div>
                 <h3 class="text-lg font-serif font-bold text-provence-800 flex items-center mb-3">
-                    <span class="w-2 h-2 rounded-full bg-terracotta mr-3"></span> Article 9 – Conditions d'accueil
+                    <span class="w-2 h-2 rounded-full bg-terracotta mr-3"></span> Article 9 – Conditions d'accueil & Politique Non-Fumeur
                 </h3>
                 <div class="text-gray-600 text-sm leading-relaxed pl-5 space-y-2">
-                    <p>Le Mas d'Orcyan accueille les adultes et les adolescents âgés de 13 ans révolus et plus.</p>
-                    <p>Les animaux de compagnie ne sont pas admis.</p>
-                    <p>Le respect du règlement intérieur est obligatoire pendant toute la durée du séjour.</p>
+                    <p>Le Mas d'Orcyan accueille les adultes et les adolescents âgés de 13 ans révolus et plus. Les animaux de compagnie ne sont pas admis.</p>
+                    <p><strong>Règle d'usage du tabac :</strong> L'ensemble des locaux intérieurs (chambres, sanitaires) ainsi que la totalité des espaces extérieurs (jardin, parc, abords de la piscine et du jacuzzi) sont strictement non-fumeurs. L'usage de la cigarette traditionnelle ou de la cigarette électronique est exclusivement toléré sur les terrasses privatives attenantes aux chambres, sous réserve de l'utilisation d'un cendrier sécurisé adapté (fourni gratuitement sur demande).</p>
+                    <p>Le respect scrupuleux de cette consigne et du règlement intérieur est obligatoire. Tout manquement constaté pourra entraîner la résiliation immédiate du séjour aux torts exclusifs du client (sans remboursement possible) et/ou la refacturation forfaitaire de frais de nettoyage professionnel complet.</p>
                 </div>
             </div>
 
@@ -259,14 +259,14 @@
         menuBtn.addEventListener('click', () => {
             menuMobile.classList.toggle('hidden');
             const isHidden = menuMobile.classList.contains('hidden');
-            menuBtn.innerHTML = isHidden ? '<i data-lucide=\"menu\" class=\"w-8 h-8\"></i>' : '<i data-lucide=\"x\" class=\"w-8 h-8\"></i>';
+            menuBtn.innerHTML = isHidden ? '<i data-lucide="menu" class="w-8 h-8"></i>' : '<i data-lucide="x" class="w-8 h-8"></i>';
             lucide.createIcons();
         });
 
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 menuMobile.classList.add('hidden');
-                menuBtn.innerHTML = '<i data-lucide=\"menu\" class=\"w-8 h-8\"></i>';
+                menuBtn.innerHTML = '<i data-lucide="menu" class="w-8 h-8"></i>';
                 lucide.createIcons();
             });
         });
